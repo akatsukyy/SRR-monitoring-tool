@@ -20,7 +20,7 @@ jobs:
         id: changed-folders
         run: |
           # Get list of changed files in last commit
-          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r HEAD)
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r -m HEAD)
 
           # Map consumer paths to shared folder names
           FOLDERS=""
